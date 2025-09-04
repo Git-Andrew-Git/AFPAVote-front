@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router";
 
 
 const CreateStagiaire = () => {
+
+    const navigate = useNavigate();
 
     return (
       <>
@@ -11,6 +14,7 @@ const CreateStagiaire = () => {
         <input type="text" placeholder="Prènom" id="prenom" />
         <label htmlFor="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Email" />
+        <button onClick={()=>navigate("/")}>Revenir sur la page Home</button>
       </>
     );
 }
